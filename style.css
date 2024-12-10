@@ -1,23 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-fonts {
-    .roboto-regular {
-        font-family: "Roboto", serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-
-      .roboto-light {
-        font-family: "Roboto", serif;
-        font-weight: 300;
-        font-style: normal;
-      }
-
-      .roboto-bold {
-        font-family: "Roboto", serif;
-        font-weight: 700;
-        font-style: normal;
-      }
+@font-face {
+    font-family: "Cerebri";
+    src: url(fonts/Cerebri-Sans-Bold.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -27,7 +12,7 @@ fonts {
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: "Cerebri", sans-serif;
     line-height: 1.6;
     background-color: #121212; /* Cinza escuro */
     color: white;
@@ -121,6 +106,93 @@ p {
 #home img {
     max-width: 50%;            /* Limita a largura da imagem para metade */
     height: auto;              /* Mantém a proporção da imagem */
+}
+
+#quem-somos {
+    margin-top: 6rem; /* Dá um espaçamento entre a seção e o topo */
+}
+
+.quem-somos-content h2 {
+    font-size: 3rem; /* Título grande */
+    margin-bottom: 2rem;
+}
+
+.quem-somos-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.quem-somos-info img {
+    max-width: 40%;  /* Ajuste da largura da imagem */
+    height: auto;    /* Mantém a proporção */
+    border-radius: 10px; /* Deixa a imagem com bordas arredondadas */
+}
+
+.descricao {
+    width: 57%;  /* Dá espaço para o texto à direita da imagem */
+    padding-left: 2rem;  /* Espaço entre a imagem e o texto */
+}
+
+.descricao p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-top: 0;
+    font-style: italic;
+}
+
+#carros {
+    margin-top: 6rem;
+    text-align: start;
+}
+
+#carros h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.carros-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para garantir que os carros se ajustem nas telas menores */
+    gap: 2rem; /* Espaço entre os carros */
+    margin-top: 2rem;
+}
+
+.carros-lado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carro {
+    width: 500px; /* Largura das imagens */
+    text-align: center;
+}
+
+
+.carro img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carro p {
+    font-size: 2rem;
+    margin-bottom: 2.5em;
+    color: white;
+    border-radius: 5px;
+    background-color: #d50707;
+}
+
+#r8 {
+    margin-top: 23px;
+}
+
+#planos {
+    margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 section {
