@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    background-color: #fff; /* Vermelho escuro */
+    background-color: #fff;
     color: #d50707;
     width: 100%;
     position: fixed;
@@ -30,6 +30,9 @@ header {
     justify-content: space-between;
     padding: 0.5rem 1rem;
     max-height: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease; /* Transição suave */
+    z-index: 1000; /* Para garantir que o header fique sobre outros elementos */
 }
 
 .logo {
@@ -154,21 +157,22 @@ p {
 
 .carros-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap; /* Para garantir que os carros se ajustem nas telas menores */
-    gap: 2rem; /* Espaço entre os carros */
     margin-top: 2rem;
 }
 
-.carros-lado {
+.carros-centro {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .carro {
-    width: 500px; /* Largura das imagens */
+    width: 600px; /* Largura das imagens */
     text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
@@ -178,21 +182,71 @@ p {
     border-radius: 10px;
 }
 
-.carro p {
+.carro h3 {
     font-size: 2rem;
-    margin-bottom: 2.5em;
+    margin-bottom: 0.5em;
     color: white;
     border-radius: 5px;
     background-color: #d50707;
 }
 
-#r8 {
-    margin-top: 23px;
+.carro-luxo {
+    width: 600px; /* Largura das imagens */
+    text-align: center;
+}
+
+
+.carro-luxo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carro-luxo h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    color: white;
+    border-radius: 5px;
+    background-color: #d50707;
 }
 
 #planos {
+    margin-top: 6rem;
+    text-align: start;
+}
+
+#planos h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.planos-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
     margin-top: 2rem;
-    padding-top: 2rem;
+}
+
+.plano {
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plano h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d50707; /* Vermelho */
+}
+
+.plano p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 section {
@@ -237,5 +291,14 @@ footer {
 
     #home img {
         max-width: 100%;        /* A imagem ocupa a largura total em telas menores */
+    }
+
+    .planos-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .plano {
+        flex: none;
     }
 }
