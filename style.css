@@ -105,7 +105,7 @@ h1, p {
 }
 
 h1 {
-    font-size: 2.5rem;           /* Tamanho do título */
+    font-size: 2.2rem;           /* Tamanho do título */
     margin-bottom: 0.5rem;     /* Espaço entre o título e o parágrafo */
 }
 
@@ -291,36 +291,25 @@ section {
     font-size: 1.2rem;
 }
 
-.contato-item a {
-    color: #d50707;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contato-item a:hover {
-    color: white; /* Altera para branco ao passar o mouse */
-}
-
 section {
   max-width: 100%;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box; /* Garante que o padding não quebre a largura da seção */
   overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
 }
 
 .planos, .contatos {
   width: 100%;
+  padding: 20px;
   box-sizing: border-box;
   overflow: hidden; /* Garante que nada escape da seção */
-  padding-left: 15px; /* Controla o espaçamento interno */
-  padding-right: 15px; /* Controla o espaçamento interno */
 }
 
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
   .planos, .contatos {
-    padding-left: 10px; /* Ajuste do padding */
-    padding-right: 10px; /* Ajuste do padding */
+    padding-left: 5px; /* Ajuste do padding */
+    padding-right: 5px; /* Ajuste do padding */
   }
 }
 
