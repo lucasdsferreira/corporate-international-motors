@@ -47,10 +47,17 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-start;
-    width: 50%;
-    font-size: 20px;
-}
+    align-items: center;
+    justify-content: space-between; /* Garante espaço para a logo e os outros itens */
+    padding: 10px 20px; /* Espaçamento interno */
+    overflow: visible; /* Evita cortes se o tamanho não estiver bem ajustado */
+  }
+  
+  nav img {
+    height: 50px; /* Ajuste conforme o design */
+    max-height: 100%; /* Garante que a logo não ultrapasse os limites */
+    object-fit: contain; /* Mantém proporções da imagem */
+  }  
 
 nav a {
     color: #d50707;
@@ -86,28 +93,30 @@ nav a:hover {
 }
 
 #home .content {
-    max-width: 50%;           /* Limita a largura do texto para metade */
+    max-width: 80%;           /* Limita a largura do texto para metade */
     margin-right: 2rem;       /* Reduz o espaço entre o texto e a imagem */
 }
 
 h1, p {
+
     max-width: 100%;           /* Garante que o conteúdo não ultrapasse a largura */
-    margin: 0;                 /* Remove margens */
+    margin: 30px 0px;                 /* Remove margens */
     word-wrap: break-word;     /* Impede que o texto quebre de forma inesperada */
 }
 
 h1 {
-    font-size: 2.7rem;           /* Tamanho do título */
+    font-size: 2.5rem;           /* Tamanho do título */
     margin-bottom: 0.5rem;     /* Espaço entre o título e o parágrafo */
 }
 
 p {
-    font-size: 1.5rem;         /* Tamanho do parágrafo */
+    font-size: 1.8rem;         /* Tamanho do parágrafo */
     max-width: 800px;          /* Limita o tamanho do parágrafo */
 }
 
 #home img {
-    max-width: 50%;            /* Limita a largura da imagem para metade */
+    margin-top: 50px;
+    max-width: 80%;            /* Limita a largura da imagem para metade */
     height: auto;              /* Mantém a proporção da imagem */
 }
 
@@ -253,44 +262,182 @@ section {
     margin-bottom: 2rem;
 }
 
-footer {
-    background-color: #333; /* Cinza escuro */
-    color: white;
+#contatos {
+    margin-top: 6rem;
+    text-align: start;
+}
+
+#contatos h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.contatos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 1rem;
+    background-color: #1e1e1e; /* Fundo escuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contato-item a {
+    color: #d50707;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contato-item a:hover {
+    color: white; /* Altera para branco ao passar o mouse */
+}
+
+/* Footer */
+footer {
+    bottom: 0; /* Alinha ao final da página */
+    left: 0; /* Alinha à borda esquerda */
+    width: 100%; /* Faz o footer cobrir toda a largura */
+    background-color: #1e1e1e; /* Cor de fundo */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem 0; /* Espaçamento interno */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    border-top: 2px solid #d50707; /* Linha de destaque no topo */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre os itens */
+}
+
+.footer-logo img {
+    width: 80px; /* Tamanho da logo */
+    height: auto;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #cccccc; /* Texto em cinza claro */
+}
+
+footer a {
+    color: #d50707;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Adicione um estilo padrão para o menu mobile */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    z-index: 1000;
+    padding: 1rem;
     text-align: center;
 }
 
-/* Responsividade */
+.menu a {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #d50707;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #d50707;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
+    /* Ajuste para o header */
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 0 20px; /* Garante espaço interno */
+      }
+      
+      nav img {
+        max-width: 100%; /* Ajusta automaticamente o tamanho */
+        height: auto;
+        align-items: center;
+      }      
+
+    .menu {
+        display: none; /* O menu fica escondido inicialmente */
     }
 
-    nav a {
-        margin: 0.5rem;
+    .menu.open {
+        display: flex; /* Mostra o menu ao clicar */
     }
 
-    .logo img {
-        height: 30px;
+    .menu-toggle {
+        display: block; /* Mostra o botão hamburguer */
     }
 
+    /* Ajustes gerais */
     #home {
-        flex-direction: column; /* Em telas menores, empilha o texto e a imagem */
-        padding-left: 3%;       /* Menos deslocamento em telas menores */
-    }
-
-    h1 {
-        font-size: 2.5rem;      /* Tamanho do título menor em telas pequenas */
-    }
-
-    p {
-        font-size: 1.2rem;      /* Tamanho do parágrafo menor em telas pequenas */
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
     }
 
     #home img {
-        max-width: 100%;        /* A imagem ocupa a largura total em telas menores */
+        max-width: 80%;
+    }
+
+    .home h1 {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte */
+        max-width: 1000px; /* Limita a largura do texto */
+        margin: 0 auto; /* Centraliza o texto no container */
+        text-align: center; /* Alinha o texto */
+      }      
+
+    .quem-somos-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quem-somos-info img {
+        max-width: 90%;
+    }
+
+    .descricao {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .carros-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .carro, .carro-luxo {
+        width: 90%;
     }
 
     .planos-container {
@@ -298,7 +445,16 @@ footer {
         gap: 1rem;
     }
 
-    .plano {
-        flex: none;
+    .plano img {
+        max-width: 100%;
+    }
+
+    .contatos-container {
+        padding: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 1rem;
     }
 }
