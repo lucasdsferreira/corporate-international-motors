@@ -115,8 +115,7 @@ p {
 }
 
 #home img {
-    margin-top: 50px;
-    max-width: 80%;            /* Limita a largura da imagem para metade */
+    max-width: 50%;            /* Limita a largura da imagem para metade */
     height: auto;              /* Mantém a proporção da imagem */
 }
 
