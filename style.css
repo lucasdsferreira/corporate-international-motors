@@ -301,6 +301,30 @@ section {
     color: white; /* Altera para branco ao passar o mouse */
 }
 
+section {
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura da seção */
+  overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
+}
+
+.planos, .contatos {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* Garante que nada escape da seção */
+  padding-left: 15px; /* Controla o espaçamento interno */
+  padding-right: 15px; /* Controla o espaçamento interno */
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .planos, .contatos {
+    padding-left: 10px; /* Ajuste do padding */
+    padding-right: 10px; /* Ajuste do padding */
+  }
+}
+
+
 /* Footer */
 footer {
     bottom: 0; /* Alinha ao final da página */
@@ -436,8 +460,12 @@ footer a:hover {
         gap: 1rem;
     }
 
-    .carro, .carro-luxo {
+    .carro-luxo {
         width: 90%;
+    }
+
+    .carro {
+        width: 80%;
     }
 
     .planos-container {
