@@ -105,12 +105,12 @@ h1, p {
 }
 
 h1 {
-    font-size: 2.2rem;           /* Tamanho do título */
+    font-size: 2rem;           /* Tamanho do título */
     margin-bottom: 0.5rem;     /* Espaço entre o título e o parágrafo */
 }
 
 p {
-    font-size: 1.8rem;         /* Tamanho do parágrafo */
+    font-size: 1.3rem;         /* Tamanho do parágrafo */
     max-width: 800px;          /* Limita o tamanho do parágrafo */
 }
 
@@ -293,7 +293,7 @@ section {
 
 section {
   max-width: 100%;
-  padding: 10px;
+  padding: 5px;
   box-sizing: border-box; /* Garante que o padding não quebre a largura da seção */
   overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
 }
